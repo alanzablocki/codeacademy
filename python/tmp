@@ -1,0 +1,552 @@
+def spam():
+    eggs = 12
+    return eggs
+print "use 4 spaces for indent"        
+print spam()
+
+meal = 44.50
+tax = 0.0675
+tip = 0.15
+
+meal = meal + meal * tax
+total = meal*(1+tip)
+
+print("%.2f" % total)
+
+"""
+The string "PYTHON" has six characters,
+numbered 0 to 5, as shown below:
+
++---+---+---+---+---+---+
+| P | Y | T | H | O | N |
++---+---+---+---+---+---+
+  0   1   2   3   4   5
+
+So if you wanted "Y", you could just type
+"PYTHON"[1] (always start counting from 0!)
+"""
+fifth_letter = "MONTY"[4]
+
+print fifth_letter
+
+parrot = "Norwegian Blue"
+print len(parrot)
+
+parrot = "Norwegian Blue"
+
+print parrot.lower() 
+
+print parrot.upper()
+
+pi = 3.14
+print str(pi)
+
+print '%s:%s:%s' % (now.hour, now.minute, now.second)
+
+def clinic():
+    print "You've just entered the clinic!"
+    print "Do you take the door on the left or the right?"
+    answer = raw_input("Type left or right and hit 'Enter'.").lower()
+    if answer == "left" or answer == "l":
+        print "This is the Verbal Abuse Room, you heap of parrot droppings!"
+    elif answer == "right" or answer == "r":
+        print "Of course this is the Argument Room, I've told you that already!"
+    else:
+        print "You didn't pick left or right! Try again."
+        clinic()
+
+clinic()
+
+
+bool_one = False or not True and True
+
+bool_two = False and not True or True
+
+bool_three = True and not (False or False)
+
+bool_four = not not True or False and not True
+
+bool_five = False or not (True and True)
+
+# Use boolean expressions as appropriate on the lines below!
+
+# Make me false!
+bool_one = (2 <= 2) and "Alpha" == "Bravo"  # We did this one for you!
+
+# Make me true!
+bool_two = True and True
+
+# Make me false!
+bool_three = not True or not (not False)
+
+# Make me true!
+bool_four = not (True and False)
+
+# Make me true!
+bool_five =  not (not True)
+
+#use this
+
+def black_knight():
+    if answer == "'Tis but a scratch!":
+        return True
+    else:             
+        return 
+
+
+so above is missing a return False otherwise None is printed when func1.py is called
+
+
+pig latin
+
+pyg = 'ay'
+
+original = raw_input('Enter a word:')
+word = original.lower()
+if len(original) > 0 and original.isalpha():
+    print word
+    first = word[0]
+    new_word = word + first + pyg
+    new_word = new_word[1:len(new_word)]
+    print new_word
+else:
+    print 'empty'
+
+
+def tax(bill):
+    """Adds 8% tax to a restaurant bill."""
+    bill *= 1.08
+    print "With tax: %f" % bill
+    return bill
+
+def tip(bill):
+    """Adds 15% tip to a restaurant bill."""
+    bill *= 1.15
+    print "With tip: %f" % bill
+    return bill
+    
+meal_cost = 100
+meal_with_tax = tax(meal_cost)
+meal_with_tip = tip(meal_with_tax)
+
+def square(n):
+    """Returns the square of a number."""
+    squared = n**2
+    print "%d squared is %d." % (n, squared)
+    return squared
+    
+# Call the square function on line 9! Make sure to
+# include the number 10 between the parentheses.
+square(10)
+
+def cube(number):
+    result = number**3
+    """print "%d cubed is $d" % (number,result)"""
+    return result
+def by_three(number):
+    if number % 3 == 0:
+        return cube(number)
+    else:
+        return False
+
+def distance_from_zero(arg):
+    if type(arg) == type(5) or type(arg) == type(10.1):
+        return abs(arg)
+    else:
+        return "Nope"
+
+
+def hotel_cost(nights):
+    return 140*nights
+
+def plane_ride_cost(city):
+    if city == "Charlotte":
+        return 183
+    elif city == "Tampa":
+        return 220
+    elif city == "Pittsburgh":
+        return 222
+    elif city == "Los Angeles":
+        return 475
+    else:
+        return False
+        
+def rental_car_cost(days):
+    if days >= 7:
+        return days*40-50
+    elif days >= 3:
+        return days*40-20
+    else:
+        return days*40
+        
+def trip_cost(city,days,spending_money):
+    return plane_ride_cost(city)+rental_car_cost(days)+hotel_cost(days)+spending_money
+        
+print trip_cost("Los Angeles",5,600)
+
+
+suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
+
+first  = suitcase[0:2]  # The first and second items (index zero and one)
+middle = suitcase[2:4]               # Third and fourth items (index two and three)
+last   = suitcase[4:6]            # The last two items (index four and five)
+
+# Assigning a dictionary with three key-value pairs to residents:
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
+
+print residents['Puffin'] # Prints Puffin's room number
+
+# Your code here!
+print residents['Sloth'] 
+print residents['Burmese Python'] 
+
+inventory = {
+    'gold' : 500,
+    'pouch' : ['flint', 'twine', 'gemstone'], # Assigned a new list to 'pouch' key
+    'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+}
+
+# Adding a key 'burlap bag' and assigning a list to it
+inventory['burlap bag'] = ['apple', 'small ruby', 'three-toed sloth']
+
+# Sorting the list found under the key 'pouch'
+inventory['pouch'].sort() 
+
+# Your code here
+inventory['pocket'] = ['seashell', 'strange berry', 'lint']
+
+inventory['backpack'].sort()
+inventory['backpack'].remove('dagger')
+inventory['gold'] +=50
+
+def fizz_count(x):
+    count = 0
+    for item in x:
+        if item == "fizz":
+            count = count + 1
+    return count
+
+price = {
+    "banana":  4,
+    "apple" :  2,
+    "orange":  1.5,
+    "pear"  :  3
+}
+
+stock = {
+    "banana":  6,
+    "apple" :  0,
+    "orange":  32,
+    "pear"  :  15
+}
+
+for key in price:
+    print key
+    print "price: %s" % price[key]
+    print "stock: %s" % stock[key]
+
+prices = {
+    "banana" : 4,
+    "apple"  : 2,
+    "orange" : 1.5,
+    "pear"   : 3,
+}
+stock = {
+    "banana" : 6,
+    "apple"  : 0,
+    "orange" : 32,
+    "pear"   : 15,
+}
+total = 0
+for key in prices:
+    print prices[key]*stock[key]
+    total = total + prices[key]*stock[key]
+    print "price: %s" % prices[key]
+    print "stock: %s" % stock[key]
+    
+print total
+
+prices = {
+    "banana" : 4,
+    "apple"  : 2,
+    "orange" : 1.5,
+    "pear"   : 3,
+}
+stock = {
+    "banana" : 6,
+    "apple"  : 0,
+    "orange" : 32,
+    "pear"   : 15,
+}
+total = 0
+for key in prices:
+    print prices[key]*stock[key]
+    total = total + prices[key]*stock[key]
+    print "price: %s" % prices[key]
+    print "stock: %s" % stock[key]
+    
+print total
+
+def compute_bill(food):
+    total = 0
+    for item in food:
+        total += prices[item]
+    return total
+
+
+def compute_bill(food):
+    total = 0
+    for item in food:
+        if stock[item] > 0:
+            total += prices[item]
+            stock[item] = stock[item]-1
+    return total
+
+lloyd = {
+    "name": "Lloyd",
+    "homework": [90.0,97.0,75.0,92.0],
+    "quizzes": [88.0,40.0,94.0],
+    "tests": [75.0,90.0]
+}
+alice = {
+    "name": "Alice",
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
+}
+tyler = {
+    "name": "Tyler",
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
+}
+
+students = [lloyd,alice,tyler]
+
+for item in students:
+    print item["name"]
+    print item["homework"]
+    print item["quizzes"]
+    print item["tests"]
+
+
+
+lloyd = {
+    "name": "Lloyd",
+    "homework": [90.0, 97.0, 75.0, 92.0],
+    "quizzes": [88.0, 40.0, 94.0],
+    "tests": [75.0, 90.0]
+}
+alice = {
+    "name": "Alice",
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
+}
+tyler = {
+    "name": "Tyler",
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
+}
+
+# Add your function below!
+def average(numbers):
+    total = sum(numbers)
+    total = float(total)
+    return total/len(numbers)
+
+def get_average(student):
+    homework = 0.1*average(student["homework"])
+    quizzes = 0.3*average(student["quizzes"])
+    tests = 0.6*average(student["tests"])
+    return homework+quizzes+tests
+
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+        
+print get_average(lloyd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+lloyd = {
+    "name": "Lloyd",
+    "homework": [90.0, 97.0, 75.0, 92.0],
+    "quizzes": [88.0, 40.0, 94.0],
+    "tests": [75.0, 90.0]
+}
+alice = {
+    "name": "Alice",
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
+}
+tyler = {
+    "name": "Tyler",
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
+}
+
+# Add your function below!
+def average(numbers):
+    total = sum(numbers)
+    total = float(total)
+    return total/len(numbers)
+
+def get_average(student):
+    homework = 0.1*average(student["homework"])
+    quizzes = 0.3*average(student["quizzes"])
+    tests = 0.6*average(student["tests"])
+    return homework+quizzes+tests
+
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+    
+print get_average(lloyd)
+
+students = [alice, lloyd, tyler]
+
+def get_class_average(students):
+    results = []
+    for item in students:
+        results.append(get_average(item))
+    
+    return average(results)
+
+print get_class_average(students)
+print get_letter_grade(get_class_average(students))
+
+
+n = [3, 5, 7]
+def double_list(x):
+    for i in range(0, len(x)):
+        y = []
+        y[i] = x[i] * 2
+        # Don't forget to return your new list!
+        return
+    
+print double_list(n)
+
+n = [3, 5, 7]
+
+def total(numbers):
+    result = 0
+    for i in range(len(numbers)):
+        result += numbers[i]
+    return result
+
+
+n = ["Michael", "Lieberman"]
+# Add your function here
+def join_strings(words):
+    result = "" # empty string
+    for item in words:
+        result += item
+    return result
+
+print join_strings(n)
+
+
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+# Add your function here
+def flatten(lists):
+    results = []
+    for numbers in lists:
+        for item in numbers:
+            results.append(item)
+    
+    return results
+    
+
+
+
+print flatten(n)
+
+
+board = []
+
+for i in range(5):
+    board.append(["O","O","O","O","O"])
+
+def print_board(board):
+    for row in board:
+        print " ".join(row)
+
+print_board(board)
+
+
+
+
+
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+    board.append(["O"] * 5)
+
+def print_board(board):
+    for row in board:
+        print " ".join(row)
+
+print_board(board)
+
+def random_row(board):
+    return randint(0, len(board) - 1)
+
+def random_col(board):
+    return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+guess_row = int(raw_input("Guess Row:"))
+guess_col = int(raw_input("Guess Col:"))
+
+print ship_row
+print ship_col
+
+# Write your code below!
+if guess_row == ship_row and guess_col == ship_col:
+    print "You sank meCongratulations! You sank my battleship!"
+elif board[guess_row][guess_col]== "X":
+    print "You guessed that one already."
+else:
+    if guess_row not in range(5) or \
+        guess_col not in range(5):
+        print "Oops, that's not even in the ocean."
+    else:
+        print "You missed my battleship!"
+        board[guess_row][guess_col] = "X"
+        print_board(board)
+            
+
