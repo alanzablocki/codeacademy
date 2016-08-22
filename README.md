@@ -1,1 +1,6 @@
 # codeacademy
+A collection of codes written while learning on codeacademy.
+
+1) Python
+2) ...
+3) ...
